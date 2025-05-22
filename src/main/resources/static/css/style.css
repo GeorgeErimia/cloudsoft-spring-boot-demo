@@ -1,0 +1,63 @@
+:root {
+    height: 100vh;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#welcome {
+    color: blue;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table > * {
+    font-size: x-large;
+}
+
+table {
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+td, th {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+}
+
+.btn-action {
+    border-radius: 0.5em;
+    height: 2em;
+    box-shadow: none;
+    background-color: cadetblue;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+.add {
+    background-color: darkgreen;
+    margin-bottom: 1em;
+    width: 10em;
+}
+
+.view {
+    background-color: blue
+}
+
+.edit {
+    background-color: blueviolet;
+}
+
+.delete {
+    background-color: brown;
+}
