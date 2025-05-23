@@ -6,42 +6,46 @@ The application and database are to be hosted separately on two different VMs, b
 ## How to run the app
 You can get the source code if you just want to try it without deploying, or fork the repo if you want to make modifications to it.
 
+Make sure you configure application.properties to match your requirements.
+
 ## Deploying to AMP - What you'll need
-- An instance of Cloudsoft AMP (Mine was hosted on a VM running CentOS9)
+- An instance of Cloudsoft AMP (Mine was hosted on a VM running CentOS 9)
 - A location to deploy
 
 > [!NOTE]
->I used two local VMs running Ubuntu 22.04, configured with Vagrant, but you can use any type of location, as long as it runs Ubuntu 22.04 or similar. If your locations are different from these, you can configure them accordingly, either via AMP GUI or by modifying      
+>I used two local Ubuntu VMs, configured with Vagrant, but you can use any type of location, as long as it runs Ubuntu 22.04 or similar. If your locations are different from these, you can configure them accordingly, either via AMP GUI or by modifying      
  the YAML.
 
 - AMP CLI \(not necessary if you deploy via AMP GUI\)
 
 > [!TIP]
-> You can download AMP CLI by going to the AMP hosted address \(typically localhost:8081\), click on the 9 dots in the top right and go to 'CLI Download' and get the CLI for your OS.
+> You can download AMP CLI by going to the AMP GUI, click on the 9 dots in the top right and go to 'CLI Download' and get the CLI for your OS.
 
 ### Deploying via GUI
 
-1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo and download the YAML files (check out the description of each release, some of them have important info related to the current issues and how to work around them)
+1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo and download the YAML files (check out the description of the release you're getting, some of them have important info related to the current issues and how to work around them)
 
 
-2. In the AMP GUI, go to Blueprint Composer and select the YAML tab
+2. In the AMP GUI, go to Blueprint Composer and select the CAMP Editor tab
 
-3. Copy and paste the YAML from <code>postgresql.yaml</code> to the blueprint, configure your locations (if yours are different) and click "Deploy".
+3. Copy and paste the YAML from <code>postgresql.yaml</code> to the blueprint.
 
-4. Same thing with <code>spring-boot-app.yaml</code>
+4. Configure your locations (if yours are different) and click "Deploy".
 
-5. Check the Inspector to see if everything works accordingly. 
+5. Same thing with <code>spring-boot-app.yaml</code>
+
+6. Check the Inspector to see if everything works accordingly. 
 
 ### Deploying via CLI 
 
 > [!IMPORTANT]
 > This guide assumes that you have AMP CLI for Windows \(also called br.exe\)
 
-1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo and download the YAML files (check out the description of each release, some of them have important info related to the current issues and how to work around them)
-
+1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo and download the YAML files (check out the description of the release you're getting, some of them have important info related to the current issues and how to work around them)
+   
 2. Make sure that <code>postgresql.yaml</code> and <code>spring-boot-app.yaml</code> are in the same directory as <code>br.exe</code>
 
-3. Configure your locations in both YAML files.
+3. Configure your locations in both YAML files (if necessary).
 
 4. Open a CMD window, go to the directory that contains <code>br.exe</code> and the YAML files.
 
@@ -52,7 +56,7 @@ You can get the source code if you just want to try it without deploying, or for
 > [!IMPORTANT]
 > You will probably be required to enter the credentials. If you haven't configured any, the default username and password are <code>admin</code> and <code>password</code>.
 
-6. Deploy the database using by executing:
+6. Deploy the database by executing:
 
     <code> br deploy postgresql-db.yaml </code>
 
@@ -63,6 +67,16 @@ You can get the source code if you just want to try it without deploying, or for
 8. If you don't have access to AMP's GUI, you can check the deployment status by executing:
 
     <code> br app </code>
+
+### After deployment
+
+You can access the web app by going to <code>http://<spring_boot_app_address>:8080/</code>
+
+To get the app's address:
+- Go to Inspector
+- Find and click on <code>Spring Boot App</code> under Applications
+- Go to Location and copy the <code>Address</code>
+
 
 
 
