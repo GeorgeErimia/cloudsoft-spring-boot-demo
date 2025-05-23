@@ -14,7 +14,7 @@ Make sure you configure application.properties to match your requirements.
 
 > [!NOTE]
 >I used two local Ubuntu VMs, configured with Vagrant, but you can use any type of location, as long as it runs Ubuntu 22.04 or similar. If your locations are different from these, you can configure them accordingly, either via AMP GUI or by modifying      
- the YAML.
+ the YAML. If you want to configure the instances just like I did, refer to <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/blob/main/Configure%20VMs.md">VM Configuration Guide</a>
 
 - AMP CLI \(not necessary if you deploy via AMP GUI\)
 
