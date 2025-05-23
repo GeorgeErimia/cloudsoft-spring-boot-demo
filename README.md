@@ -27,7 +27,7 @@ You can get the source code if you just want to try it without deploying, or for
 
 4. Same thing with <code>spring-boot-app.yaml</code>
 
-5. Check the Inspector to see if anything works accordingly. 
+5. Check the Inspector to see if everything works accordingly. 
 
 ### Deploying via CLI 
 
