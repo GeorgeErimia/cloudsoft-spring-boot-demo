@@ -23,8 +23,7 @@ Make sure you configure application.properties to match your requirements.
 
 ### Deploying via GUI
 
-1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo and download the YAML files (check out the description of the release you're getting, some of them have important info related to the current issues and how to work around them)
-
+1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo and download the YAML blueprints (check out the description of the release you're getting, some of them have important info related to the current issues and how to work around them)
 
 2. In the AMP GUI, go to Blueprint Composer and select the CAMP Editor tab
 
@@ -41,13 +40,13 @@ Make sure you configure application.properties to match your requirements.
 > [!IMPORTANT]
 > This guide assumes that you have AMP CLI for Windows \(also called br.exe\)
 
-1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo and download the YAML files (check out the description of the release you're getting, some of them have important info related to the current issues and how to work around them)
+1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo and download the YAML blueprints (check out the description of the release you're getting, some of them have important info related to the current issues and how to work around them)
    
 2. Make sure that <code>postgresql.yaml</code> and <code>spring-boot-app.yaml</code> are in the same directory as <code>br.exe</code>
 
-3. Configure your locations in both YAML files (if necessary).
+3. Configure your locations in both YAML blueprints (if necessary).
 
-4. Open a CMD window, go to the directory that contains <code>br.exe</code> and the YAML files.
+4. Open a CMD window, navigate to the directory that contains <code>br.exe</code> and the blueprints.
 
 5. Login to AMP by executing:
 
@@ -77,6 +76,19 @@ To get the app's address:
 - Find and click on <code>Spring Boot App</code> under Applications
 - Go to Location and copy the <code>Address</code>
 
+### ADDITIONAL: Adding to the AMP Catalog (CLI)
+
+You can add both blueprints to the AMP Catalog. In order to do that, follow these steps: 
+
+1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo, and download <code>catalog.bom</code>
+2. Place it in the same folder as your YAML blueprints and br.exe
+3. Open a CMD window, navigate to the directory that contains <code>br.exe</code>
+4. Login to AMP by executing: <code>br login http://\<your_amp_address\></code> - replace \<your_amp_address\> with the address that AMP is hosted on \(typically <code>localhost:8081</code>)
+5. Execute the following: <code>br catalog add .</code>
+
+After that, you can use them straight from the AMP GUI, by going to <code>Blueprint Composer</code> and searching for them in the <code>Entites tab</code>.
+
+These two entities should have the following names: <code>Spring Boot 2T APP</code> and <code>Postgresql 2T Database</code> respectively.
 
 
 
