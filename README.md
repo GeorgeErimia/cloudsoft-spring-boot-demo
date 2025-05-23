@@ -10,11 +10,14 @@ You can get the source code if you just want to try it without deploying, or for
 - An instance of Cloudsoft AMP (Mine was hosted on a VM running CentOS9)
 - A location to deploy
 
-    !!! I used two local VMs running Ubuntu 22.04, configured with Vagrant, but you can use any type of location, as long as it runs Ubuntu 22.04 or similar. If your locations are different from these, you can configure them accordingly, either via AMP GUI or by modifying the YAML.
+> [!NOTE]
+>I used two local VMs running Ubuntu 22.04, configured with Vagrant, but you can use any type of location, as long as it runs Ubuntu 22.04 or similar. If your locations are different from these, you can configure them accordingly, either via AMP GUI or by modifying      
+ the YAML.
 
 - AMP CLI \(not necessary if you deploy via AMP GUI\)
 
-!!! You can download AMP CLI by going to the AMP hosted address \(typically localhost:8081\), click on the 9 dots in the top right and go to 'CLI Download' and get the CLI for your OS.
+> [!TIP]
+> You can download AMP CLI by going to the AMP hosted address \(typically localhost:8081\), click on the 9 dots in the top right and go to 'CLI Download' and get the CLI for your OS.
 
 ### Deploying via GUI
 
@@ -31,7 +34,8 @@ You can get the source code if you just want to try it without deploying, or for
 
 ### Deploying via CLI 
 
-!!! This guide assumes that you have AMP CLI for Windows \(also called br.exe\)
+> [!IMPORTANT]
+> This guide assumes that you have AMP CLI for Windows \(also called br.exe\)
 
 1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo and download the YAML files (check out the description of each release, some of them have important info related to the current issues and how to work around them)
 
@@ -45,7 +49,8 @@ You can get the source code if you just want to try it without deploying, or for
 
     <code>br login http://\<your_amp_address\></code> - replace \<your_amp_address\> with the address that AMP is hosted on \(typically <code>localhost:8081</code>)
 
-    !!! You will probably be required to enter the credentials. If you haven't configured any, the default username and password are <code>admin</code> and <code>password</code>.
+> [!IMPORTANT]
+> You will probably be required to enter the credentials. If you haven't configured any, the default username and password are <code>admin</code> and <code>password</code>.
 
 6. Deploy the database using by executing:
 
