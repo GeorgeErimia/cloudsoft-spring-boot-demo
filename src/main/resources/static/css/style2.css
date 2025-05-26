@@ -1,0 +1,184 @@
+:root {
+    height: 100vh;
+    --primary-color: #0077cc;
+    --secondary-color: #2e8b57;
+    --accent-blue: #1e90ff;
+    --accent-purple: #8a2be2;
+    --accent-red: #b22222;
+    --background-light: #fdf6e3;
+    --background-gradient: linear-gradient(135deg, #fdf6e3, #ffe4c4);
+    --font-color: #333;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-gradient);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--font-color);
+}
+
+/* Layout Containers */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Headings */
+#welcome {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    margin: 0.5rem 0;
+}
+
+/* Tables */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Buttons */
+.button-bar {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-action {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+    margin: 0.25rem;
+}
+
+.add {
+    background-color: var(--secondary-color);
+}
+
+.view {
+    background-color: var(--accent-blue);
+}
+
+.edit {
+    background-color: var(--accent-purple);
+}
+
+.delete {
+    background-color: var(--accent-red);
+}
+
+.home {
+    background-color: gray;
+}
+
+.btn-action:hover {
+    opacity: 0.85;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #0077cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .card {
+        padding: 1.5rem;
+    }
+
+    .btn-action {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    table, th, td {
+        font-size: 0.9rem;
+    }
+
+    .button-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
