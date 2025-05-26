@@ -50,7 +50,7 @@ Make sure you configure application.properties to match your requirements.
 
 5. Login to AMP by executing:
 
-    <code>br login http://\<your_amp_address\></code> - replace \<your_amp_address\> with the address that AMP is hosted on \(typically <code>localhost:8081</code>)
+    <code>br login http://\<your_amp_address\></code> - replace \<your_amp_address\> with the address that AMP is hosted on \(typically <code>localhost:8081</code> if you're hosting it locally)
 
 > [!IMPORTANT]
 > You will probably be required to enter the credentials. If you haven't configured any, the default username and password are <code>admin</code> and <code>password</code>.
@@ -83,7 +83,7 @@ You can add both blueprints to the AMP Catalog. In order to do that, follow thes
 1. Go to the <a href="https://github.com/GeorgeErimia/cloudsoft-spring-boot-demo/releases/"> Releases </a> section of this repo, and download <code>catalog.bom</code>
 2. Place it in the same folder as your YAML blueprints and br.exe
 3. Open a CMD window, navigate to the directory that contains <code>br.exe</code>
-4. Login to AMP by executing: <code>br login http://\<your_amp_address\></code> - replace \<your_amp_address\> with the address that AMP is hosted on \(typically <code>localhost:8081</code>)
+4. Login to AMP by executing: <code>br login http://\<your_amp_address\></code> - replace \<your_amp_address\> with the address that AMP is hosted on \(typically <code>localhost:8081</code> if you're hosting it locally)
 5. Execute the following: <code>br catalog add .</code>
 
 After that, you can use them straight from the AMP GUI, by going to <code>Blueprint Composer</code> and searching for them in the <code>Entites tab</code>.
