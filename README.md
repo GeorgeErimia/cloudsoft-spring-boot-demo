@@ -1,7 +1,7 @@
 # Cloudsoft Spring Boot Demo
 This is a Spring Boot app that can be deployed and managed via Cloudsoft AMP. It's a basic user management system that connects to a PostgreSQL database and executes CRUD operations. 
 
-The application and database are to be hosted separately on two different VMs, but they can run on the same VM if you want. The point of this project is to demonstrate how you can deploy different application blueprints to different machines with Cloudsoft AMP.
+The application and database are to be hosted separately on two different VMs, but they can run on the same VM if you want. The point of this project is to demonstrate how you can deploy and manage different application blueprints on different machines (locations) with Cloudsoft AMP.
 
 ## How to run the app
 You can get the source code if you just want to try it without deploying, or fork the repo if you want to make modifications to it.
