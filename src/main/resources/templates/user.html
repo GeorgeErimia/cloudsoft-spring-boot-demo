@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title th:text="'USER: ' + ${user.name}">Title</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-</head>
-<body>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+  </head>
+  <body>
     <div class="main-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <a th:href="@{/user/edit/{id}(id=${user.id})}">
-                            <button class="btn-action edit">edit</button>
-                        </a>
-                        <form th:action="@{/user/delete/{id}(id=${user.id})}" method="post" style="display:inline;">
-                            <input type="hidden" name="_method" value="delete" />
-                            <button type="submit" class="btn-action delete" onclick="return confirm('Are you sure you want to delete this user?');">
-                                delete
-                            </button>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <h2 th:text="'ID: ' + ${user.id}"></h2>
-        <h2 th:text="'Name: ' + ${user.name}"></h2>
-        <h2 th:text="'Description: ' + ${user.description}"></h2>
+      <div class="card">
+        <div class="button-bar">
+          <a th:href="@{/users}">
+            <button type="button" class="btn-action home">Home</button>
+          </a>
+        </div>
+        <h1 id="welcome" th:text="'User: ' + ${user.name}">User: N/A</h1>
+
+        <div class="user-info">
+          <p><strong>ID: </strong><span th:text="${user.id}">N/A</span></p>
+          <p><strong>Name: </strong><span th:text="${user.name}">N/A</span></p>
+          <p>
+            <strong>Description: </strong
+            ><span th:text="${user.description}">N/A</span>
+          </p>
+        </div>
+
+        <div class="button-bar">
+          <a th:href="@{/user/edit/{id}(id=${user.id})}">
+            <button class="btn-action edit">Edit</button>
+          </a>
+          <form
+            th:action="@{/user/delete/{id}(id=${user.id})}"
+            method="post"
+            style="display: inline"
+          >
+            <input type="hidden" name="_method" value="delete" />
+            <button
+              type="submit"
+              class="btn-action delete"
+              onclick="return confirm('Are you sure you want to delete this user?');"
+            >
+              Delete
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

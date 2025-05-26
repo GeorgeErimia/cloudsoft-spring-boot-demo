@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title th:text="'Edit User: ' + ${user.name}">Edit User</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="card">
+        <div class="button-bar">
+          <a th:href="@{/users}">
+            <button type="button" class="btn-action home">Home</button>
+          </a>
+        </div>
 
-<h2>Edit User</h2>
+        <h1 id="welcome" th:text="'Edit User: ' + ${user.name}">Edit User</h1>
 
-<form th:action="@{/user/update}" th:object="${user}" method="post">
-    <input type="hidden" name="_method" value="put" />
-    <input type="hidden" th:field="*{id}" />
+        <form
+          th:action="@{/user/update}"
+          th:object="${user}"
+          method="post"
+          class="form"
+        >
+          <input type="hidden" name="_method" value="put" />
+          <input type="hidden" th:field="*{id}" />
 
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" th:field="*{name}" required />
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" th:field="*{name}" required />
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea
+              id="description"
+              th:field="*{description}"
+              rows="4"
+            ></textarea>
+          </div>
+          <div class="button-bar">
+            <button type="submit" class="btn-action edit">Save</button>
+            <a th:href="@{/users}">
+              <button type="button" class="btn-action delete">Cancel</button>
+            </a>
+          </div>
+        </form>
+      </div>
     </div>
-
-    <div>
-        <label for="description">Description:</label>
-        <textarea id="description" th:field="*{description}" rows="4"></textarea>
-    </div>
-
-    <div>
-        <button type="submit">Save</button>
-        <a th:href="@{/users}">Cancel</a>
-    </div>
-</form>
-
-</body>
+  </body>
 </html>
